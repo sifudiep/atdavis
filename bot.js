@@ -11,19 +11,15 @@ mikeid = "180735443418087424";
 bot.on('message', msg => {
     if (msg.author.bot) return;
 
-    rnd = Math.floor((Math.random() * 2) + 1);
-
-
-
     if (msg.author.id === davisid) {
-        msg.react('772820533066203167')
+        msg.react('772820533066203167');
+        msg.react('773656627281920091');
     }
 
     davisImg = new Discord.MessageAttachment;
     davisImg.attachment = "https://cdn.discordapp.com/attachments/773180545957232664/773615213408026674/mrandmrs.png";
 
     if (msg.content === "testdb") {
-        console.log("oopsie");
         msg.channel.send(davisImg);
     }
 
