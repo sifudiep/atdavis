@@ -18,17 +18,25 @@ bot.on('message', msg => {
     davisImg = new Discord.MessageAttachment;
     if (rnd === 1) {
         davisImg.attachment = "./mrandmrs.png";
-    } else if (rnd === 2) {
-        davisImg.attachment = "./davisekko.png";
     }
 
-    console.log(msg.author);
+    if (msg.author.id === davisid) {
+        msg.react('772820533066203167')
+    }
+
+    if (msg.content === "testdb") {
+        msg.channel.send(davisImg);
+    }
 
     msg.mentions.users.forEach(user => {
-        if (user.id === davisid || msg.content === "testdb") {
+        if (user.id === mikeid) {
+            console.log("sending davis img...")
             msg.channel.send(davisImg)
         }
     });
 })
 
-bot.login(process.env.token);
+token = "NzczMjA1NTI4Mjg1NDEzMzg3.X6F1ww.ZXyXv8XjulGoflOabE_TjSzeo6w"
+
+
+bot.login(token);
