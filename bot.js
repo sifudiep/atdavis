@@ -20,13 +20,12 @@ bot.on('message', msg => {
         davisImg.attachment = "./mrandmrs.png";
     } else if (rnd === 2) {
         davisImg.attachment = "./davisekko.png";
-
     }
 
-    msg.mentions.users.forEach(user => {
-        if (user.id === davisid) {
+    console.log(msg.author);
 
-            console.log(davisImg);
+    msg.mentions.users.forEach(user => {
+        if (user.id === davisid || msg.content === "testdb") {
             msg.channel.send(davisImg)
         }
     });
