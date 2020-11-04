@@ -20,7 +20,7 @@ bot.on('message', msg => {
     }
 
     davisImg = new Discord.MessageAttachment;
-    davisImg.attachment = "https://i.postimg.cc/zXmZVfZ5/mrandmrs.png";
+    davisImg.attachment = "https://cdn.discordapp.com/attachments/773180545957232664/773615213408026674/mrandmrs.png";
 
     if (msg.content === "testdb") {
         console.log("oopsie");
