@@ -19,12 +19,19 @@ bot.on('message', msg => {
 
     davisImg = new Discord.MessageAttachment;
     davisImg.attachment = "https://cdn.discordapp.com/attachments/773180545957232664/773615213408026674/mrandmrs.png";
+    danielImg = new Discord.MessageAttachment;
+    danielImg.attachment = "./danielclown.jpg";
 
     if (msg.content === "testdb") {
-        msg.channel.send(davisImg);
+        msg.channel.send(danielImg);
     }
 
     msg.mentions.users.forEach(user => {
+        if (user.id === danielid) {
+            console.log("sending daniel img..")
+            msg.channel.send()
+        }
+
         if (user.id === davisid) {
             console.log("sending davis img...")
             msg.channel.send(davisImg)
