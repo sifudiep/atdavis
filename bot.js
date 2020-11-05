@@ -29,7 +29,7 @@ bot.on('message', msg => {
     msg.mentions.users.forEach(user => {
         if (user.id === danielid) {
             console.log("sending daniel img..")
-            msg.channel.send()
+            msg.channel.send(danielImg)
         }
 
         if (user.id === davisid) {
