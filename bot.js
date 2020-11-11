@@ -55,16 +55,21 @@ function startBot() {
         msg.mentions.users.forEach(user => {
             console.log("download start...")
             if (user.id === davisid) {
-                download(imageURLS[clownIndex], path, () => {
+                download(imageURLS[clownIndex], path , (err) => {
+                    console.log("wow it downloaded....")
                     davisImg.attachment = path;
                     msg.channel.send(davisImg)
-                    clownIndex += 1;
+                    clownIndex += 1
                 })
             }
             
             if (user.id === danielid) {
-                console.log("sending daniel img..")
-                msg.channel.send(danielImg)
+                download(imageURLS[clownIndex], path , (err) => {
+                    console.log("wow it downloaded....")
+                    davisImg.attachment = path;
+                    msg.channel.send(davisImg)
+                    clownIndex += 1
+                })
             }
         });
     
