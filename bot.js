@@ -82,11 +82,11 @@ function startBot() {
 console.log("STARTING NIGHTMARE...")
 
 nightmare.goto("https://duckduckgo.com/?q=clown&atb=v231-1&iar=images&iax=images&ia=images")
-// for (i = 0; i < 10; i++) {
-//     yValue += 99999
-//     nightmare.scrollTo(yValue, 0)
-//     nightmare.wait(1000)
-// }
+for (i = 0; i < 10; i++) {
+    yValue += 99999
+    nightmare.scrollTo(yValue, 0)
+    nightmare.wait(1000)
+}
 nightmare.evaluate(() => {
         imgElements = document.body.getElementsByClassName("tile--img__img  js-lazyload");
         imgURLS = []
