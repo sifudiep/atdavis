@@ -52,7 +52,7 @@ bot.on('message', msg => {
 
     msg.mentions.users.forEach(user => {
         console.log("download start...")
-        if (user.id === davisid || danielid) {
+        if (user.id === davisid || user.id === danielid) {
             download(imageURLs[clownIndex], path , (err) => {
                 console.log("wow it downloaded....")
                 davisImg.attachment = path;
