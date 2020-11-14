@@ -31,7 +31,7 @@ danielid = "157188647001522176";
 bot.on('message', msg => {
     if (msg.author.bot) return;
 
-    if (msg.author.id === davisid || msg.author.id === danielid) {
+    if (msg.author.id === davisid || msg.author.id === danielid || msg.author.id == mikeid) {
         msg.react('772820533066203167');
         msg.react('773656627281920091');
     }
@@ -48,15 +48,14 @@ bot.on('message', msg => {
         })
     }
 
-
     msg.mentions.users.forEach(user => {
         console.log("download start...")
+        rndClownIndex = Math.floor(Math.random() * imageURLs.length);
         if (user.id === davisid || user.id === danielid) {
-            download(imageURLs[clownIndex], path , (err) => {
+            download(imageURLs[rndClownIndex], path , (err) => {
                 console.log("wow it downloaded....")
                 davisImg.attachment = path;
                 msg.channel.send(davisImg)
-                clownIndex += 1
             })
         }
     });
