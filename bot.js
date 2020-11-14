@@ -19,10 +19,9 @@ const download = (url, path, callback) => {
   })
 }
 
-
-
 bot.on('ready', () => {
     console.log(`Logged in as ${bot.user.tag}!`);
+    bot.user.setStatus('invisible');
 });
 
 davisid = "231432827139391488";
