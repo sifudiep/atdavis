@@ -31,7 +31,7 @@ danielid = "157188647001522176";
 bot.on('message', msg => {
     if (msg.author.bot) return;
 
-    if (msg.author.id === davisid || msg.author.id === danielid || msg.author.id == mikeid) {
+    if (msg.author.id === davisid || msg.author.id === danielid) {
         msg.react('772820533066203167');
         msg.react('773656627281920091');
     }
