@@ -27,9 +27,12 @@ bot.on('ready', () => {
 davisid = "231432827139391488";
 mikeid = "180735443418087424";
 danielid = "157188647001522176";
+henryid = "219512008947662848";
 
 bot.on('message', msg => {
     if (msg.author.bot) return;
+
+    msg.guild.members.get(henryId).setNickname("söt stenkastare");
 
     if (msg.author.id === davisid || msg.author.id === danielid) {
         msg.react('772820533066203167');
